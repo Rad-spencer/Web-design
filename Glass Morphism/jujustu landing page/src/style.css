@@ -1,0 +1,285 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: url('_.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Glassmorphism Effect */
+.glass {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Increased shadow depth */
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    background-color: transparent;
+}
+
+.logo {
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.6); /* Inset shadow for depth effect */
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 12px;
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.6); /* Inset shadow for depth effect */
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 40px; /* Increased margin for more spacing */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    padding-right: 50px;
+}
+
+.search-bar {
+    background-color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.6); /* Inset shadow for depth effect */
+    margin-right: 20px; /* Added margin for spacing from the right side */
+}
+
+.search-bar input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    background: transparent;
+    color: white;
+}
+
+/* Hero Section styling */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    color: rgb(255, 255, 255);
+}
+
+.hero-content {
+    max-width: 30%;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color:  rgba(55, 127, 223, 0.2);
+    border-radius: 12px;
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.6); /* Inset shadow for depth effect */
+    backdrop-filter: blur(10px);
+}
+
+.streaming-btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 111, 97, 0.8);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.6); /* Inset shadow for depth effect */
+    transition: background-color 0.3s ease;
+}
+
+.streaming-btn:hover {
+    background-color: rgba(255, 111, 97, 1);
+  
+}
+
+.description {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #ddd;
+}
+
+.rating {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.6); /* Inset shadow for depth effect */
+}
+
+.rating .star {
+    color: yellow; /* Yellow color for filled stars */
+    margin-right: 5px;
+}
+
+.character-highlight {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+/* Nobara and Fushiguro Card Styles */
+.character-nobara {
+    width: 150px;
+    height: 200px;
+    background-color: rgba(136, 136, 136, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.6); /* Inset shadow for depth effect */
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+}
+
+.character-nobara img {
+    width:100%;
+    height: 100%;
+   
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.character-fushiguro {
+    width: 150px;
+    height: 200px;
+    background-color: rgba(136, 136, 136, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.6); /* Inset shadow for depth effect */
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.character-fushiguro img {
+    width:100%;
+    height: 100%;
+   
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* Main Content styling */
+.characters-section {
+    padding: 50px;
+    background-color: transparent;
+}
+
+.characters-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: rgb(0, 0, 0);
+        font-size: 48px;
+        /* margin-bottom: 20px; */
+        padding:5px 1px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 12px;
+        box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.6); /* Inset shadow for depth effect */
+        backdrop-filter: blur(10px);
+        
+}
+
+.characters {
+    display: flex;
+    justify-content: space-around;
+}
+
+.character-box {
+    width: 120px;
+    height: 200px;
+    background-color: rgba(204, 204, 204, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.6); /* Inset shadow for depth effect */
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+}
+
+.character-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.character-box:hover {
+    background-color: rgba(204, 204, 204, 0.4);
+}
+
+/* Footer styling */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    background-color: transparent;
+    font-size: 14px;
+}
+
+.social-media, .additional-links {
+    display: flex;
+    text-decoration:none;
+    color: white;
+}
+
+.additional-links a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+}
