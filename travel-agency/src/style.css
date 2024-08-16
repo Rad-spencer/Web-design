@@ -1,0 +1,749 @@
+/* Global Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #001a33;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(0, 119, 182, 0.8), rgba(0, 119, 182, 0.5));
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: background 0.3s ease;
+/*      background: linear-gradient(145deg, #1e1e20, #181818); */
+    box-shadow: 3px 3px 5px #111, -3px -3px 5px #2b2b2d;
+}
+
+.logo a {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    color: #FAF3E0;
+    text-decoration: none;
+}
+
+.nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.nav ul li a {
+    color: #FAF3E0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: #F78FB3;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-bar input {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 3px solid #ffff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #F78FB3;
+}
+
+.search-bar i {
+    position: absolute;
+    right: 10px;
+    color: #2B2D42;
+}
+
+.cta .btn-book-now {
+    padding: 0.75rem 1.5rem;
+    background-color: #0077B6;
+    color: #FAF3E0;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+margin-right:8vh;
+}
+
+.cta .btn-book-now:hover {
+    background-color: #E76F51;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 200vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: -1;
+}
+
+/* .parallax-bg.bg1 {
+    background-image: url('https://i.pinimg.com/736x/eb/f9/2b/ebf92b8cfafa061ffed7c4a6fefa00c0.jpg');
+} */
+
+.parallax-bg.bg2 {
+    background-image: url('https://i.pinimg.com/736x/82/7d/86/827d86346e61acf7a82ecfad2ec8116b.jpg');
+/*     opacity: 0.7;
+    mix-blend-mode: overlay; */
+}
+
+.hero-content {
+    z-index: 1;
+    color: #FAF3E0;
+    padding: 0 2rem;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-content p span {
+  color : #000;
+}
+
+.hero-content .btn-explore {
+    padding: 1rem 2rem;
+    background-color: #2A9D8F;
+    color: #FAF3E0;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .btn-explore:hover {
+    background-color: #E9C46A;
+}
+
+/* About Us Section */
+.about-us-section {
+    background-color:  #001a33;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.about-us-content {
+    display: flex;
+    max-width: 1200px;
+    width: 90%;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-us-image img {
+    width: 100%;
+    height: auto;
+/*     border-radius: 10px; */
+    transform: scale(1);
+    transition: transform 0.5s ease;
+    border-radius: 16px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 8px 15px rgba(0, 0, 0, 0.6); /* Inset shadow for depth effect */
+    backdrop-filter: blur(10px);
+}
+
+.about-us-image img:hover {
+    transform: scale(1.05);
+}
+
+.about-us-text {
+    max-width: 600px;
+}
+
+.about-us-text h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-family: 'Merriweather', serif;
+}
+
+.about-us-text p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.about-us-text .btn-learn-more {
+    padding: 0.75rem 2rem;
+    background-color: #E76F51;
+    color: #FAF3E0;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.about-us-text .btn-learn-more:hover {
+    background-color: #F78FB3;
+}
+
+/* Featured Destinations Section */
+.featured-destinations-section {
+    background-color:  #001a33;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-family: 'Merriweather', serif;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.destination-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.destination-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+        border-radius: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.6); /* Inset shadow for depth effect */
+    backdrop-filter: blur(10px);
+}
+
+.destination-card:hover img {
+    transform: scale(1.1);
+}
+
+.destination-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FAF3E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.destination-card:hover .destination-overlay {
+    opacity: 1;
+}
+
+.destination-overlay p {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+
+.tours-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  color:#000;
+}
+
+.tours-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-family: 'Merriweather', serif;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+   
+}
+
+.filter-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+/*     background-color: #eee; */
+    cursor: pointer;
+   background: linear-gradient(145deg, #1e1e20, #181818);
+    box-shadow: 3px 3px 5px #111, -3px -3px 5px #2b2b2d;
+color: #bfb8b8
+}
+
+.filter-button.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.tour-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+/*     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.3s;
+/*         border-radius: 16px; */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.6); /* Inset shadow for depth effect */
+    backdrop-filter: blur(10px);
+}
+
+.tour-card:hover {
+    transform: translateY(-10px);
+}
+
+.tour-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.tour-content {
+    padding: 20px;
+}
+
+.tour-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+}
+
+.tour-content p {
+    margin: 0 0 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff4a3d;
+}
+
+
+
+.testimonial-section {
+    background-color: #001a33;
+    background-image: url('path_to_subtle_pattern_image'); /* Add your subtle pattern image here */
+    background-size: cover;
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.testimonial-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.testimonial-content {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.testimonial-img {
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.review {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.rating {
+    font-size: 20px;
+    color: gold;
+}
+
+.testimonial-slide.active {
+    opacity: 1;
+}
+
+.testimonial-img:hover {
+    transform: scale(1.1);
+}
+
+
+.cta-container {
+    text-align: center;
+    background-color: #001a33;
+    padding: 50px;
+     border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.6); /* Inset shadow for depth effect */
+    backdrop-filter: blur(10px);
+    max-width: 600px;
+    width: 90%;
+  margin-left:60vh;
+}
+
+.cta-text {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    font-size: 18px;
+    padding: 15px 30px;
+    background-color: #ff6600;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    animation: pulse 2s infinite;
+    transition: transform 0.2s;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 102, 0, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 102, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 102, 0, 0);
+    }
+}
+
+
+
+#contact {
+    padding: 50px 0;
+    background-color: ##001a33;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-form {
+    width: 50%;
+    animation: slideInLeft 1s ease-out;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.contact-info {
+    width: 45%;
+    position: relative;
+}
+
+#map {
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+     gap:40px;
+}
+
+.icon {
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s ease;
+    text-decoration:none;
+     border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.6); /* Inset shadow for depth effect */
+    backdrop-filter: blur(10px);
+}
+
+.icon:hover {
+    color: #007bff;
+}
+
+.icon .ri-instagram-fill:hover {
+    background: linear-gradient(to bottom, #feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+/* Footer Section */
+.footer {
+/*   background-color: #1a1a1a; */
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+   border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for glass effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Outer shadow for depth */
+    backdrop-filter: blur(10px) saturate(180%); /* Blur and saturation for glass effect */
+    -webkit-backdrop-filter: blur(10px) saturate(180%); /* For Safari support */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border-radius: 12px; /* Rounded corners */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  flex: 1;
+  margin: 20px;
+}
+
+.footer-links a {
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-subscription {
+  flex: 1;
+  margin: 20px;
+}
+
+.footer-subscription h3 {
+  margin-bottom: 10px;
+}
+
+.footer-subscription form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-subscription input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 60%;
+}
+
+.footer-subscription button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6600;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-subscription button:hover {
+  background-color: #ff4500;
+}
+
+.footer-social {
+  flex: 1;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top:70px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration:none;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.social-icon .ri-instagram-fill:hover {
+    background: linear-gradient(to bottom, #feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5 );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.social-icon .ri-facebook-fill:hover {
+  color:#17A9FD;
+}
+
+.social-icon .ri-twitter-fill:hover {
+  color:#1DA1F2;
+}
+
+.social-icon .ri-linkedin-fill:hover {
+  color:#0A66C2;
+}
+.footer-copyright {
+  margin-top: 20px;
+}
+
+/* Fade-In Animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
