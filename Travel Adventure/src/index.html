@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Adventure</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero-section">
+        <nav class="navbar">
+            <div class="logo">TRAVEL ADVENTURE</div>
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Tours</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><i class="ri-facebook-fill"></i></a>
+                <a href="#"><i class="ri-instagram-line"></i></a>
+                <a href="#"><i class="ri-twitter-line"></i></a>
+            </div>
+            <div class="hamburger-menu">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1>Explore the World with Us</h1>
+            <p>Your adventure starts here. Discover amazing tours and experiences around the globe.</p>
+            <a href="#" class="cta-button">Purchase Now</a>
+        </div>
+    </header>
+
+      <!-- Search Filter Section -->
+      <div class="search-section neumorphic">
+        <div class="tabs neumorphic">
+            <div class="tab active">
+                <i class="ri-flight-takeoff-line"></i>
+                <span>Flights</span>
+            </div>
+            <div class="tab">
+                <i class="ri-hotel-line"></i>
+                <span>Hotels</span>
+            </div>
+            <div class="tab">
+                <i class="ri-home-4-line"></i>
+                <span>Homestays & Villas</span>
+            </div>
+            <div class="tab">
+                <i class="ri-gift-line"></i>
+                <span>Holiday Packages</span>
+            </div>
+            <div class="tab">
+                <i class="ri-train-line"></i>
+                <span>Trains</span>
+            </div>
+            <div class="tab">
+                <i class="ri-bus-line"></i>
+                <span>Buses</span>
+            </div>
+            <div class="tab">
+                <i class="ri-taxi-line"></i>
+                <span>Cabs</span>
+            </div>
+            <div class="tab">
+                <i class="ri-exchange-dollar-line"></i>
+                <span>Forex Card & Currency</span>
+            </div>
+            <div class="tab">
+                <i class="ri-shield-check-line"></i>
+                <span>Travel Insurance</span>
+            </div>
+        </div>
+
+        <div class="search-options">
+            <div class="trip-type">
+                <label><input type="radio" name="trip" checked> One Way</label>
+                <label><input type="radio" name="trip"> Round Trip</label>
+                <label><input type="radio" name="trip"> Multi City</label>
+            </div>
+
+            <div class="input-fields">
+                <div class="input-group neumorphic">
+                    <label for="from-destination">From</label>
+                    <input type="text" id="from-destination" placeholder="Enter origin">
+                    <ul id="from-suggestions"></ul>
+                </div>
+
+                <div class="input-group neumorphic">
+                    <label for="to-destination">To</label>
+                    <input type="text" id="to-destination" placeholder="Enter destination">
+                    <ul id="to-suggestions"></ul>
+                </div>
+
+                <div class="input-group neumorphic">
+                    <label for="departure-date">Departure</label>
+                    <input type="date" id="departure-date">
+                </div>
+
+                <div class="input-group neumorphic">
+                    <label for="return-date">Return</label>
+                    <input type="date" id="return-date" placeholder="Tap to add a return date for bigger discounts">
+                </div>
+
+                <div class="input-group neumorphic">
+                    <label for="travellers-class">Travellers & Class</label>
+                    <select id="travellers-class">
+                        <option>1 Traveller, Economy</option>
+                        <option>2 Travellers, Economy</option>
+                        <option>3 Travellers, Business</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="special-fares">
+                <p>Select a special fare</p>
+                <div class="fares">
+                    <label><input type="radio" name="fare" checked> Regular</label>
+                    <label><input type="radio" name="fare"> Student</label>
+                    <label><input type="radio" name="fare"> Senior Citizen</label>
+                    <label><input type="radio" name="fare"> Armed Forces</label>
+                    <label><input type="radio" name="fare"> Doctor and Nurses</label>
+                </div>
+            </div>
+
+            <button id="search-btn" class="neumorphic">SEARCH</button>
+        </div>
+    </div>
+
+
+ <!-- Tour planning Section -->
+
+
+    <section class="best-selling-tours">
+        <h2 class="section-title">Best Selling Tours</h2>
+        <div class="tour-grid">
+            <!-- Tour Card 1 -->
+            <div class="tour-card">
+                <img src="https://i.pinimg.com/564x/0b/c0/27/0bc027406eb69e48ab3e28ef8f2827f8.jpg" alt="Tour 1" class="tour-image">
+                <div class="tour-details">
+                    <h3 class="tour-title">Amazing Beach Getaway</h3>
+                    <p class="tour-description">Experience the serene beaches with a 5-day stay.</p>
+                    <p class="tour-duration">Duration: 5 Days</p>
+                    <p class="tour-location">Location: Maldives</p>
+                    <p class="tour-price">$999</p>
+                    <a href="#" class="tour-cta">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Tour Card 2 -->
+            <div class="tour-card">
+                <img src="https://i.pinimg.com/736x/69/e0/9d/69e09d67c76ca3b64cf7cdfa5fec2203.jpg" alt="Tour 2" class="tour-image">
+                <div class="tour-details">
+                    <h3 class="tour-title">Mountain Adventure</h3>
+                    <p class="tour-description">Hike through the stunning mountain ranges.</p>
+                    <p class="tour-duration">Duration: 7 Days</p>
+                    <p class="tour-location">Location: Himalayas, India</p>
+                    <p class="tour-price">$1,299</p>
+                    <a href="#" class="tour-cta">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Tour Card 3 -->
+            <div class="tour-card">
+                <img src="https://i.pinimg.com/564x/8c/f5/0f/8cf50fbc133dab0ad22f8af49cc0d29f.jpg" alt="Tour 3" class="tour-image">
+                <div class="tour-details">
+                    <h3 class="tour-title">Cultural City Tour</h3>
+                    <p class="tour-description">Explore the vibrant culture and history.</p>
+                    <p class="tour-duration">Duration: 3 Days</p>
+                    <p class="tour-location">Location: Rome, Italy</p>
+                    <p class="tour-price">$799</p>
+                    <a href="#" class="tour-cta">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Tour Card 4 -->
+            <div class="tour-card">
+                <img src="https://i.pinimg.com/564x/0c/69/d5/0c69d5d6591f9d55a1839d681ab76f02.jpg" alt="Tour 4" class="tour-image">
+                <div class="tour-details">
+                    <h3 class="tour-title">Desert Safari</h3>
+                    <p class="tour-description">Experience the thrill of a desert safari.</p>
+                    <p class="tour-duration">Duration: 2 Days</p>
+                    <p class="tour-location">Location: Dubai, UAE</p>
+                    <p class="tour-price">$499</p>
+                    <a href="#" class="tour-cta">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Tour Card 5 -->
+            <div class="tour-card">
+                <img src="https://i.pinimg.com/564x/31/27/f7/3127f7aaba4b7085db3d2af66b7bcdf0.jpg" alt="Tour 5" class="tour-image">
+                <div class="tour-details">
+                    <h3 class="tour-title">Historical Europe</h3>
+                    <p class="tour-description">Visit the historical landmarks of Europe.</p>
+                    <p class="tour-duration">Duration: 10 Days</p>
+                    <p class="tour-location">Location: Europe</p>
+                    <p class="tour-price">$2,499</p>
+                    <a href="#" class="tour-cta">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Tour Card 6 -->
+            <div class="tour-card">
+                <img src="https://i.pinimg.com/736x/a8/fb/90/a8fb90921dc92f6992f656d67d6fa454.jpg" alt="Tour 6" class="tour-image">
+                <div class="tour-details">
+                    <h3 class="tour-title">Safari Adventure</h3>
+                    <p class="tour-description">Explore the wilderness with a guided safari.</p>
+                    <p class="tour-duration">Duration: 6 Days</p>
+                    <p class="tour-location">Location: Kenya, Africa</p>
+                    <p class="tour-price">$1,799</p>
+                    <a href="#" class="tour-cta">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Tour Card 7 -->
+            <div class="tour-card">
+                <img src="https://i.pinimg.com/564x/60/1c/63/601c635e3da0fb17d8db4839b34c3eb0.jpg" alt="Tour 7" class="tour-image">
+                <div class="tour-details">
+                    <h3 class="tour-title">Island Hopping</h3>
+                    <p class="tour-description">Enjoy island hopping and beach adventures.</p>
+                    <p class="tour-duration">Duration: 8 Days</p>
+                    <p class="tour-location">Location: Philippines</p>
+                    <p class="tour-price">$1,199</p>
+                    <a href="#" class="tour-cta">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Tour Card 8 -->
+            <div class="tour-card">
+                <img src="https://i.pinimg.com/564x/e7/3d/f5/e73df5253aa643a167d80d70e266cfbb.jpg" alt="Tour 8" class="tour-image">
+                <div class="tour-details">
+                    <h3 class="tour-title">Cruise the Mediterranean</h3>
+                    <p class="tour-description">Sail across the beautiful Mediterranean Sea.</p>
+                    <p class="tour-duration">Duration: 9 Days</p>
+                    <p class="tour-location">Location: Mediterranean</p>
+                    <p class="tour-price">$1,999</p>
+                    <a href="#" class="tour-cta">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Tour Card 9 -->
+            <div class="tour-card">
+                <img src="https://i.pinimg.com/736x/8f/9c/46/8f9c46f2da7cef113ca99f74a4acdf44.jpg" alt="Tour 9" class="tour-image">
+                <div class="tour-details">
+                    <h3 class="tour-title">Northern Lights Adventure</h3>
+                    <p class="tour-description">Witness the spectacular Northern Lights.</p>
+                    <p class="tour-duration">Duration: 4 Days</p>
+                    <p class="tour-location">Location: Iceland</p>
+                    <p class="tour-price">$1,499</p>
+                    <a href="#" class="tour-cta">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Tour Card 10 -->
+            <div class="tour-card">
+                <img src="https://i.pinimg.com/564x/05/a9/3e/05a93e21f0fd7bd8d8efd822f4a245fe.jpg" alt="Tour 10" class="tour-image">
+                <div class="tour-details">
+                    <h3 class="tour-title">Culinary Tour</h3>
+                    <p class="tour-description">Indulge in culinary delights on this food tour.</p>
+                    <p class="tour-duration">Duration: 5 Days</p>
+                    <p class="tour-location">Location: Paris, France</p>
+                    <p class="tour-price">$1,299</p>
+                    <a href="#" class="tour-cta">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Popular Tour  Section -->
+     <div class="popular-section">
+    <div class="heading-popular">
+
+        <h1>Popular Tours</h1>
+    </div>
+    <div class="carousel-container">
+        <button class="carousel-button prev">‹</button>
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/564x/0b/c0/27/0bc027406eb69e48ab3e28ef8f2827f8.jpg" alt="Beach Tours">
+                <div class="carousel-caption">Beach Tours</div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/69/e0/9d/69e09d67c76ca3b64cf7cdfa5fec2203.jpg" alt="Mountain Adventure">
+                <div class="carousel-caption">Mountain Adventure</div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/a8/fb/90/a8fb90921dc92f6992f656d67d6fa454.jpg" alt="Safari Tours">
+                <div class="carousel-caption">Safari Tours</div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/564x/60/1c/63/601c635e3da0fb17d8db4839b34c3eb0.jpg" alt="Cultural Trips">
+                <div class="carousel-caption">Cultural Trips</div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/564x/e7/3d/f5/e73df5253aa643a167d80d70e266cfbb.jpg" alt="City Tours">
+                <div class="carousel-caption">City Tours</div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/8f/9c/46/8f9c46f2da7cef113ca99f74a4acdf44.jpg" alt="Island Getaways">
+                <div class="carousel-caption">Island Getaways</div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/564x/05/a9/3e/05a93e21f0fd7bd8d8efd822f4a245fe.jpg" alt="Adventure Sports">
+                <div class="carousel-caption">Adventure Sports</div>
+            </div>
+        </div>
+        <button class="carousel-button next">›</button>
+    </div>
+</div>
+
+ <!-- Testimonials Section -->
+
+ 
+<div class="testimonial-section">
+ <div class="heading-popular">
+
+     <h1>Top Reviews</h1>
+ </div>
+ <section class="testimonial-container">
+    <div class="testimonial-slider">
+        <div class="testimonial">
+            <div class="testimonial-content">
+                <div class="testimonial-image">
+                    <img src="https://i.pinimg.com/564x/0a/00/d7/0a00d7ef6e8f02a887aabb6e112788db.jpg" alt="User 1">
+                </div>
+                <div class="testimonial-text">
+                    <p class="testimonial-name">Kate Rogers - Graphic Designer</p>
+                    <p class="testimonial-title">AMAZING CUSTOMER SERVICE</p>
+                    <p class="testimonial-description">I needed a refund for tickets to an event that was changed last minute. The customer service was excellent,<br> and the issue was resolved promptly. Thanks to agent Sandra!</p>
+                    <div class="rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="testimonial-content">
+                <div class="testimonial-image">
+                    <img src="https://i.pinimg.com/564x/2e/9b/68/2e9b68c134546464f177addbfdb5130a.jpg" alt="User 2">
+                </div>
+                <div class="testimonial-text">
+                    <p class="testimonial-name">John Doe - Photographer</p>
+                    <p class="testimonial-title">EXCELLENT EXPERIENCE</p>
+                    <p class="testimonial-description">The trip was absolutely amazing. The scenic views were breathtaking, and the service was top-notch.</p>
+                    <div class="rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="testimonial-content">
+                <div class="testimonial-image">
+                    <img src="https://i.pinimg.com/564x/c2/d1/c3/c2d1c3c450ba3347ae7563916b390c68.jpg" alt="User 3">
+                </div>
+                <div class="testimonial-text">
+                    <p class="testimonial-name">Alice Smith - Web Developer</p>
+                    <p class="testimonial-title">FANTASTIC SERVICE</p>
+                    <p class="testimonial-description">Everything was perfectly organized. I had a fantastic time and felt very comfortable throughout the journey.</p>
+                    <div class="rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="testimonial-content">
+                <div class="testimonial-image">
+                    <img src="https://i.pinimg.com/564x/40/30/4f/40304fc739865fa7b87054dcc88e1646.jpg" alt="User 4">
+                </div>
+                <div class="testimonial-text">
+                    <p class="testimonial-name">Michael Brown - Entrepreneur</p>
+                    <p class="testimonial-title">WONDERFUL EXPERIENCE</p>
+                    <p class="testimonial-description">A wonderful experience. The team was very helpful and the trip was beyond my expectations.</p>
+                    <div class="rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="testimonial-content">
+                <div class="testimonial-image">
+                    <img src="https://i.pinimg.com/564x/30/24/5d/30245df3bc0f85d956afa1a629f27468.jpg" alt="User 5">
+                </div>
+                <div class="testimonial-text">
+                    <p class="testimonial-name">Emily Davis - Marketing Expert</p>
+                    <p class="testimonial-title">BEST TRIP EVER</p>
+                    <p class="testimonial-description">The best trip I've ever had. The service was top-notch and the destinations were breathtaking.</p>
+                    <div class="rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="testimonial-content">
+                <div class="testimonial-image">
+                    <img src="https://i.pinimg.com/564x/12/71/8e/12718e00d6882ec6781535ed6f513f68.jpg" alt="User 6">
+                </div>
+                <div class="testimonial-text">
+                    <p class="testimonial-name">David Johnson - Travel Blogger</p>
+                    <p class="testimonial-title">EXCELLENT ADVENTURE</p>
+                    <p class="testimonial-description">An excellent adventure. The journey was smooth and I was able to capture amazing moments.</p>
+                    <div class="rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="testimonial-dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</section>
+</div>
+
+
+ <!-- Newsletter Subscription Section -->
+ <section class="newsletter-section">
+    <div class="newsletter-content">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated with our latest news and offers. Enter your email below to subscribe.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section class="blog-section">
+    <h2>Latest Blog Posts</h2>
+    <div class="blog-grid">
+        <div class="blog-card">
+            <img src="https://i.pinimg.com/736x/ee/ab/1c/eeab1c5501a2af85ec6f851fd5ee8307.jpg" alt="Blog Post 1">
+            <div class="blog-content">
+                <h3>Exploring the Mountains</h3>
+                <p>Discover the beauty of mountain landscapes and the thrill of hiking to the summit.</p>
+            </div>
+        </div>
+        <div class="blog-card">
+            <img src="https://i.pinimg.com/564x/06/0e/a2/060ea29379ed5f6fd684f8e3d46158c5.jpg" alt="Blog Post 2">
+            <div class="blog-content">
+                <h3>City Adventures</h3>
+                <p>Experience the hustle and bustle of the world's most exciting cities.</p>
+            </div>
+        </div>
+        <div class="blog-card">
+            <img src="https://i.pinimg.com/564x/92/4a/3b/924a3b5cf2854715d83e0b2100a531ed.jpg" alt="Blog Post 3">
+            <div class="blog-content">
+                <h3>Beach Getaways</h3>
+                <p>Relax on the world's most beautiful beaches with crystal clear waters and white sands.</p>
+            </div>
+        </div>
+        <div class="blog-card">
+            <img src="https://i.pinimg.com/736x/a5/eb/bd/a5ebbd187a4263cd2e934318da6c1fbc.jpg" alt="Blog Post 4">
+            <div class="blog-content">
+                <h3>Cultural Journeys</h3>
+                <p>Immerse yourself in different cultures and traditions across the globe.</p>
+            </div>
+        </div>
+        <div class="blog-card">
+            <img src="https://i.pinimg.com/564x/f1/b5/b6/f1b5b6bc8bdcad03b73835b8e4f6d006.jpg" alt="Blog Post 5">
+            <div class="blog-content">
+                <h3>Wildlife Safaris</h3>
+                <p>Get up close and personal with the world's most incredible wildlife on a safari adventure.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+ <!-- Footer Section -->
+ <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-links">
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="#"><i class="ri-home-line"></i> Home</a></li>
+                <li><a href="#"><i class="ri-map-pin-line"></i> Destinations</a></li>
+                <li><a href="#"><i class="ri-flight-takeoff-line"></i> Tours</a></li>
+                <li><a href="#"><i class="ri-information-line"></i> About Us</a></li>
+                <li><a href="#"><i class="ri-phone-line"></i> Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-gallery">
+            <h3>Gallery</h3>
+            <div class="gallery-grid">
+                <a href="#"><img src="https://i.pinimg.com/564x/0b/c0/27/0bc027406eb69e48ab3e28ef8f2827f8.jpg" alt="Gallery Image 1"></a>
+                <a href="#"><img src="https://i.pinimg.com/736x/69/e0/9d/69e09d67c76ca3b64cf7cdfa5fec2203.jpg" alt="Gallery Image 2"></a>
+                <a href="#"><img src="https://i.pinimg.com/736x/a8/fb/90/a8fb90921dc92f6992f656d67d6fa454.jpg" alt="Gallery Image 3"></a>
+                <a href="#"><img src="https://i.pinimg.com/564x/60/1c/63/601c635e3da0fb17d8db4839b34c3eb0.jpg" alt="Gallery Image 4"></a>
+                <a href="#"><img src="https://i.pinimg.com/564x/e7/3d/f5/e73df5253aa643a167d80d70e266cfbb.jpg" alt="Gallery Image 5"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Raj Kumar Sen. All Rights Reserved.</p>
+        <div class="social-media">
+            <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-youtube-fill"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
